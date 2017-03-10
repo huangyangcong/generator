@@ -62,6 +62,72 @@ public class TableConfiguration extends PropertyHolder {
     /** The update by example statement enabled. */
     private boolean updateByExampleStatementEnabled;
 
+
+    /** The insert statement name. */
+    private String insertStatementName;
+
+    /** The select by primary key statement name. */
+    private String selectByPrimaryKeyStatementName;
+
+    /** The select by example statement name. */
+    private String selectByExampleStatementName;
+
+    /** The update by primary key statement name. */
+    private String updateByPrimaryKeyStatementName;
+
+    /** The delete by primary key statement name. */
+    private String deleteByPrimaryKeyStatementName;
+
+    /** The delete by example statement name. */
+    private String deleteByExampleStatementName;
+
+    /** The count by example statement name. */
+    private String countByExampleStatementName;
+
+    /** The update by example statement name. */
+    private String updateByExampleStatementName;
+
+    /** The insert by selective statement name. */
+    private String insertSelectiveStatementName;
+
+    /** The update by example selective statement name. */
+    private String updateByExampleSelectiveStatementName;
+
+    /** The update by primary key selective statement name. */
+    private String updateByPrimaryKeySelectiveStatementName;
+
+    /** The base result name. */
+    private String baseResultMapName;
+
+    /** The example where clause name. */
+    private String exampleWhereClauseName;
+
+    /** The myBatis3 update by example where clause name. */
+    private String myBatis3UpdateByExampleWhereClauseName;
+
+    /** The select all name. */
+    private String selectAllName;
+
+    /** The select by example with blobs name. */
+    private String selectByExampleWithBLOBsStatementName;
+
+    /** The update by primary key with blobs name. */
+    private String updateByPrimaryKeyWithBLOBsStatementName;
+
+    /** The update by example with blobs name. */
+    private String updateByExampleWithBLOBsStatementName;
+
+    /** The blob column list name. */
+    private String blobColumnListName;
+
+    /** The result map with blobs name. */
+    private String resultMapWithBLOBsName;
+
+    /** The base column list name. */
+    private String baseColumnListName;
+
+
+
     /** The column overrides. */
     private List<ColumnOverride> columnOverrides;
 
@@ -679,6 +745,92 @@ public class TableConfiguration extends PropertyHolder {
                     "modelType", configuredModelType)); //$NON-NLS-1$
         }
 
+        /*add by ychuang 20170310 start*/
+        if (stringHasValue(insertStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "insertStatementName", insertStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(selectByPrimaryKeyStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "selectByPrimaryKeyStatementName", selectByPrimaryKeyStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(selectByExampleStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "selectByExampleStatementName", selectByExampleStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(updateByPrimaryKeyStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "updateByPrimaryKeyStatementName", updateByPrimaryKeyStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(deleteByPrimaryKeyStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "deleteByPrimaryKeyStatementName", deleteByPrimaryKeyStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(deleteByExampleStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "deleteByExampleStatementName", deleteByExampleStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(countByExampleStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "countByExampleStatementName", countByExampleStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(updateByExampleStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "updateByExampleStatementName", updateByExampleStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(insertSelectiveStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "insertSelectiveStatementName", insertSelectiveStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(updateByExampleSelectiveStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "updateByExampleSelectiveStatementName", updateByExampleSelectiveStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(updateByPrimaryKeySelectiveStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "updateByPrimaryKeySelectiveStatementName", updateByPrimaryKeySelectiveStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(baseResultMapName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "baseResultMapName", baseResultMapName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(exampleWhereClauseName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "exampleWhereClauseName", exampleWhereClauseName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(myBatis3UpdateByExampleWhereClauseName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "myBatis3UpdateByExampleWhereClauseName", myBatis3UpdateByExampleWhereClauseName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(selectAllName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "selectAllName", selectAllName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(selectByExampleWithBLOBsStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "selectByExampleWithBLOBsStatementName", selectByExampleWithBLOBsStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(updateByPrimaryKeyWithBLOBsStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "updateByPrimaryKeyWithBLOBsStatementName", updateByPrimaryKeyWithBLOBsStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(updateByExampleWithBLOBsStatementName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "updateByExampleWithBLOBsStatementName", updateByExampleWithBLOBsStatementName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(blobColumnListName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "blobColumnListName", blobColumnListName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(resultMapWithBLOBsName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "resultMapWithBLOBsName", resultMapWithBLOBsName)); //$NON-NLS-1$
+        }
+        if (stringHasValue(baseColumnListName)) {
+            xmlElement.addAttribute(new Attribute(
+                    "baseColumnListName", baseColumnListName)); //$NON-NLS-1$
+        }
+        /*add by ychuang 20170310 end*/
         if (wildcardEscapingEnabled) {
             xmlElement.addAttribute(new Attribute("escapeWildcards", "true")); //$NON-NLS-1$ //$NON-NLS-2$
         }
@@ -797,6 +949,174 @@ public class TableConfiguration extends PropertyHolder {
     public void setUpdateByExampleStatementEnabled(
             boolean updateByExampleStatementEnabled) {
         this.updateByExampleStatementEnabled = updateByExampleStatementEnabled;
+    }
+
+    public String getInsertStatementName() {
+        return insertStatementName;
+    }
+
+    public void setInsertStatementName(String insertStatementName) {
+        this.insertStatementName = insertStatementName;
+    }
+
+    public String getSelectByPrimaryKeyStatementName() {
+        return selectByPrimaryKeyStatementName;
+    }
+
+    public void setSelectByPrimaryKeyStatementName(String selectByPrimaryKeyStatementName) {
+        this.selectByPrimaryKeyStatementName = selectByPrimaryKeyStatementName;
+    }
+
+    public String getSelectByExampleStatementName() {
+        return selectByExampleStatementName;
+    }
+
+    public void setSelectByExampleStatementName(String selectByExampleStatementName) {
+        this.selectByExampleStatementName = selectByExampleStatementName;
+    }
+
+    public String getUpdateByPrimaryKeyStatementName() {
+        return updateByPrimaryKeyStatementName;
+    }
+
+    public void setUpdateByPrimaryKeyStatementName(String updateByPrimaryKeyStatementName) {
+        this.updateByPrimaryKeyStatementName = updateByPrimaryKeyStatementName;
+    }
+
+    public String getDeleteByPrimaryKeyStatementName() {
+        return deleteByPrimaryKeyStatementName;
+    }
+
+    public void setDeleteByPrimaryKeyStatementName(String deleteByPrimaryKeyStatementName) {
+        this.deleteByPrimaryKeyStatementName = deleteByPrimaryKeyStatementName;
+    }
+
+    public String getDeleteByExampleStatementName() {
+        return deleteByExampleStatementName;
+    }
+
+    public void setDeleteByExampleStatementName(String deleteByExampleStatementName) {
+        this.deleteByExampleStatementName = deleteByExampleStatementName;
+    }
+
+    public String getCountByExampleStatementName() {
+        return countByExampleStatementName;
+    }
+
+    public void setCountByExampleStatementName(String countByExampleStatementName) {
+        this.countByExampleStatementName = countByExampleStatementName;
+    }
+
+    public String getUpdateByExampleStatementName() {
+        return updateByExampleStatementName;
+    }
+
+    public void setUpdateByExampleStatementName(String updateByExampleStatementName) {
+        this.updateByExampleStatementName = updateByExampleStatementName;
+    }
+
+    public String getInsertSelectiveStatementName() {
+        return insertSelectiveStatementName;
+    }
+
+    public void setInsertSelectiveStatementName(String insertSelectiveStatementName) {
+        this.insertSelectiveStatementName = insertSelectiveStatementName;
+    }
+
+    public String getUpdateByExampleSelectiveStatementName() {
+        return updateByExampleSelectiveStatementName;
+    }
+
+    public void setUpdateByExampleSelectiveStatementName(String updateByExampleSelectiveStatementName) {
+        this.updateByExampleSelectiveStatementName = updateByExampleSelectiveStatementName;
+    }
+
+    public String getUpdateByPrimaryKeySelectiveStatementName() {
+        return updateByPrimaryKeySelectiveStatementName;
+    }
+
+    public void setUpdateByPrimaryKeySelectiveStatementName(String updateByPrimaryKeySelectiveStatementName) {
+        this.updateByPrimaryKeySelectiveStatementName = updateByPrimaryKeySelectiveStatementName;
+    }
+
+    public String getBaseResultMapName() {
+        return baseResultMapName;
+    }
+
+    public void setBaseResultMapName(String baseResultMapName) {
+        this.baseResultMapName = baseResultMapName;
+    }
+
+    public String getExampleWhereClauseName() {
+        return exampleWhereClauseName;
+    }
+
+    public void setExampleWhereClauseName(String exampleWhereClauseName) {
+        this.exampleWhereClauseName = exampleWhereClauseName;
+    }
+
+    public String getMyBatis3UpdateByExampleWhereClauseName() {
+        return myBatis3UpdateByExampleWhereClauseName;
+    }
+
+    public void setMyBatis3UpdateByExampleWhereClauseName(String myBatis3UpdateByExampleWhereClauseName) {
+        this.myBatis3UpdateByExampleWhereClauseName = myBatis3UpdateByExampleWhereClauseName;
+    }
+
+    public String getSelectAllName() {
+        return selectAllName;
+    }
+
+    public void setSelectAllName(String selectAllName) {
+        this.selectAllName = selectAllName;
+    }
+
+    public String getSelectByExampleWithBLOBsStatementName() {
+        return selectByExampleWithBLOBsStatementName;
+    }
+
+    public void setSelectByExampleWithBLOBsStatementName(String selectByExampleWithBLOBsStatementName) {
+        this.selectByExampleWithBLOBsStatementName = selectByExampleWithBLOBsStatementName;
+    }
+
+    public String getUpdateByPrimaryKeyWithBLOBsStatementName() {
+        return updateByPrimaryKeyWithBLOBsStatementName;
+    }
+
+    public void setUpdateByPrimaryKeyWithBLOBsStatementName(String updateByPrimaryKeyWithBLOBsStatementName) {
+        this.updateByPrimaryKeyWithBLOBsStatementName = updateByPrimaryKeyWithBLOBsStatementName;
+    }
+
+    public String getUpdateByExampleWithBLOBsStatementName() {
+        return updateByExampleWithBLOBsStatementName;
+    }
+
+    public void setUpdateByExampleWithBLOBsStatementName(String updateByExampleWithBLOBsStatementName) {
+        this.updateByExampleWithBLOBsStatementName = updateByExampleWithBLOBsStatementName;
+    }
+
+    public String getBlobColumnListName() {
+        return blobColumnListName;
+    }
+
+    public void setBlobColumnListName(String blobColumnListName) {
+        this.blobColumnListName = blobColumnListName;
+    }
+
+    public String getResultMapWithBLOBsName() {
+        return resultMapWithBLOBsName;
+    }
+
+    public void setResultMapWithBLOBsName(String resultMapWithBLOBsName) {
+        this.resultMapWithBLOBsName = resultMapWithBLOBsName;
+    }
+
+    public String getBaseColumnListName() {
+        return baseColumnListName;
+    }
+
+    public void setBaseColumnListName(String baseColumnListName) {
+        this.baseColumnListName = baseColumnListName;
     }
 
     /**

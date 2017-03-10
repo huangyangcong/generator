@@ -807,6 +807,70 @@ public abstract class IntrospectedTable {
         setBaseColumnListId("Base_Column_List"); //$NON-NLS-1$
         setBlobColumnListId("Blob_Column_List"); //$NON-NLS-1$
         setMyBatis3UpdateByExampleWhereClauseId("Update_By_Example_Where_Clause"); //$NON-NLS-1$
+
+        if(stringHasValue(tableConfiguration.getCountByExampleStatementName())){
+            setCountByExampleStatementId(tableConfiguration.getCountByExampleStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getDeleteByExampleStatementName())){
+            setDeleteByExampleStatementId(tableConfiguration.getDeleteByExampleStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getDeleteByPrimaryKeyStatementName())){
+            setDeleteByPrimaryKeyStatementId(tableConfiguration.getDeleteByPrimaryKeyStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getInsertStatementName())){
+            setInsertStatementId(tableConfiguration.getInsertStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getInsertSelectiveStatementName())){
+            setInsertSelectiveStatementId(tableConfiguration.getInsertSelectiveStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getSelectAllName())){
+            setSelectAllStatementId(tableConfiguration.getSelectAllName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getSelectByExampleStatementName())){
+            setSelectByExampleStatementId(tableConfiguration.getSelectByExampleStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getSelectByExampleWithBLOBsStatementName())){
+            setSelectByExampleWithBLOBsStatementId(tableConfiguration.getSelectByExampleWithBLOBsStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getSelectByPrimaryKeyStatementName())){
+            setSelectByPrimaryKeyStatementId(tableConfiguration.getSelectByPrimaryKeyStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getUpdateByExampleStatementName())){
+            setUpdateByExampleStatementId(tableConfiguration.getUpdateByExampleStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getUpdateByExampleSelectiveStatementName())){
+            setUpdateByExampleSelectiveStatementId(tableConfiguration.getUpdateByExampleSelectiveStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getUpdateByExampleWithBLOBsStatementName())){
+            setUpdateByExampleWithBLOBsStatementId(tableConfiguration.getUpdateByExampleWithBLOBsStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getUpdateByPrimaryKeyStatementName())){
+            setUpdateByPrimaryKeyStatementId(tableConfiguration.getUpdateByPrimaryKeyStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getUpdateByPrimaryKeySelectiveStatementName())){
+            setUpdateByPrimaryKeySelectiveStatementId(tableConfiguration.getUpdateByPrimaryKeySelectiveStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getUpdateByPrimaryKeyWithBLOBsStatementName())){
+            setUpdateByPrimaryKeyWithBLOBsStatementId(tableConfiguration.getUpdateByPrimaryKeyWithBLOBsStatementName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getBaseResultMapName())){
+            setBaseResultMapId(tableConfiguration.getBaseResultMapName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getResultMapWithBLOBsName())){
+            setResultMapWithBLOBsId(tableConfiguration.getResultMapWithBLOBsName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getExampleWhereClauseName())){
+            setExampleWhereClauseId(tableConfiguration.getExampleWhereClauseName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getBaseColumnListName())){
+            setBaseColumnListId(tableConfiguration.getBaseColumnListName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getBlobColumnListName())){
+            setBlobColumnListId(tableConfiguration.getBlobColumnListName()); //$NON-NLS-1$
+        }
+        if(stringHasValue(tableConfiguration.getMyBatis3UpdateByExampleWhereClauseName())){
+            setMyBatis3UpdateByExampleWhereClauseId(tableConfiguration.getMyBatis3UpdateByExampleWhereClauseName()); //$NON-NLS-1$
+        }
     }
 
     /**

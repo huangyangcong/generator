@@ -65,7 +65,7 @@ import org.w3c.dom.NodeList;
 
 /**
  * This class parses configuration files into the new Configuration API
- * 
+ *
  * @author Jeff Butler
  */
 public class MyBatisGeneratorConfigurationParser {
@@ -258,6 +258,50 @@ public class MyBatisGeneratorConfigurationParser {
                 .getProperty("enableCountByExample"); //$NON-NLS-1$
         String enableUpdateByExample = attributes
                 .getProperty("enableUpdateByExample"); //$NON-NLS-1$
+        /*add by ychuang start */
+        String insertName = attributes.getProperty("enableInsert"); //$NON-NLS-1$
+        String selectByPrimaryKeyName = attributes
+                .getProperty("selectByPrimaryKeyName"); //$NON-NLS-1$
+        String selectByExampleName = attributes
+                .getProperty("selectByExampleName"); //$NON-NLS-1$
+        String updateByPrimaryKeyName = attributes
+                .getProperty("updateByPrimaryKeyName"); //$NON-NLS-1$
+        String deleteByPrimaryKeyName = attributes
+                .getProperty("deleteByPrimaryKeyName"); //$NON-NLS-1$
+        String deleteByExampleName = attributes
+                .getProperty("deleteByExampleName"); //$NON-NLS-1$
+        String countByExampleName = attributes
+                .getProperty("countByExampleName"); //$NON-NLS-1$
+        String updateByExampleName = attributes
+                .getProperty("updateByExampleName"); //$NON-NLS-1$
+        String insertSelectiveStatementName = attributes
+                .getProperty("insertSelectiveStatementName"); //$NON-NLS-1$
+        String updateByExampleSelectiveStatementName = attributes
+                .getProperty("updateByExampleSelectiveStatementName"); //$NON-NLS-1$
+        String updateByPrimaryKeySelectiveStatementName = attributes
+                .getProperty("updateByPrimaryKeySelectiveStatementName"); //$NON-NLS-1$
+        String baseResultMapName = attributes
+                .getProperty("baseResultMapName"); //$NON-NLS-1$
+        String exampleWhereClauseName = attributes
+                .getProperty("exampleWhereClauseName"); //$NON-NLS-1$
+        String myBatis3UpdateByExampleWhereClauseName = attributes
+                .getProperty("myBatis3UpdateByExampleWhereClauseName"); //$NON-NLS-1$
+        String selectAllName = attributes
+                .getProperty("selectAllName"); //$NON-NLS-1$
+        String selectByExampleWithBLOBsStatementName = attributes
+                .getProperty("selectByExampleWithBLOBsStatementName"); //$NON-NLS-1$
+        String updateByPrimaryKeyWithBLOBsStatementName = attributes
+                .getProperty("updateByPrimaryKeyWithBLOBsStatementName"); //$NON-NLS-1$
+        String updateByExampleWithBLOBsStatementName = attributes
+                .getProperty("updateByExampleWithBLOBsStatementName"); //$NON-NLS-1$
+        String blobColumnListName = attributes
+                .getProperty("blobColumnListName"); //$NON-NLS-1$
+        String resultMapWithBLOBsName = attributes
+                .getProperty("resultMapWithBLOBsName"); //$NON-NLS-1$
+        String baseColumnListName = attributes
+                .getProperty("baseColumnListName"); //$NON-NLS-1$
+        /*add by ychuang end */
+
         String selectByPrimaryKeyQueryId = attributes
                 .getProperty("selectByPrimaryKeyQueryId"); //$NON-NLS-1$
         String selectByExampleQueryId = attributes
@@ -267,7 +311,7 @@ public class MyBatisGeneratorConfigurationParser {
         String delimitIdentifiers = attributes
                 .getProperty("delimitIdentifiers"); //$NON-NLS-1$
         String delimitAllColumns = attributes.getProperty("delimitAllColumns"); //$NON-NLS-1$
-        
+
         String mapperName = attributes.getProperty("mapperName"); //$NON-NLS-1$
         String sqlProviderName = attributes.getProperty("sqlProviderName"); //$NON-NLS-1$
 
@@ -330,6 +374,92 @@ public class MyBatisGeneratorConfigurationParser {
                     isTrue(enableUpdateByExample));
         }
 
+        /*add by ychuang start*/
+        if (stringHasValue(insertName)) {
+            tc.setInsertStatementName(insertName);
+        }
+
+        if (stringHasValue(selectByPrimaryKeyName)) {
+            tc.setSelectByPrimaryKeyStatementName(selectByPrimaryKeyName);
+        }
+
+        if (stringHasValue(selectByExampleName)) {
+            tc.setSelectByExampleStatementName(selectByExampleName);
+        }
+
+        if (stringHasValue(updateByPrimaryKeyName)) {
+            tc.setUpdateByPrimaryKeyStatementName(updateByPrimaryKeyName);
+        }
+
+        if (stringHasValue(deleteByPrimaryKeyName)) {
+            tc.setDeleteByPrimaryKeyStatementName(deleteByPrimaryKeyName);
+        }
+
+        if (stringHasValue(deleteByExampleName)) {
+            tc.setDeleteByExampleStatementName(deleteByExampleName);
+        }
+
+        if (stringHasValue(countByExampleName)) {
+            tc.setCountByExampleStatementName(countByExampleName);
+        }
+
+        if (stringHasValue(updateByExampleName)) {
+            tc.setUpdateByExampleStatementName(updateByExampleName);
+        }
+
+        if (stringHasValue(insertSelectiveStatementName)) {
+            tc.setInsertSelectiveStatementName(insertSelectiveStatementName);
+        }
+
+        if (stringHasValue(updateByExampleSelectiveStatementName)) {
+            tc.setUpdateByExampleSelectiveStatementName(updateByExampleSelectiveStatementName);
+        }
+
+        if (stringHasValue(updateByPrimaryKeySelectiveStatementName)) {
+            tc.setUpdateByPrimaryKeySelectiveStatementName(updateByPrimaryKeySelectiveStatementName);
+        }
+
+        if (stringHasValue(baseResultMapName)) {
+            tc.setBaseResultMapName(baseResultMapName);
+        }
+
+        if (stringHasValue(exampleWhereClauseName)) {
+            tc.setExampleWhereClauseName(exampleWhereClauseName);
+        }
+
+        if (stringHasValue(myBatis3UpdateByExampleWhereClauseName)) {
+            tc.setMyBatis3UpdateByExampleWhereClauseName(myBatis3UpdateByExampleWhereClauseName);
+        }
+
+        if (stringHasValue(selectAllName)) {
+            tc.setSelectAllName(selectAllName);
+        }
+
+        if (stringHasValue(selectByExampleWithBLOBsStatementName)) {
+            tc.setSelectByExampleWithBLOBsStatementName(selectByExampleWithBLOBsStatementName);
+        }
+
+        if (stringHasValue(updateByPrimaryKeyWithBLOBsStatementName)) {
+            tc.setUpdateByPrimaryKeyWithBLOBsStatementName(updateByPrimaryKeyWithBLOBsStatementName);
+        }
+
+        if (stringHasValue(updateByExampleWithBLOBsStatementName)) {
+            tc.setUpdateByExampleWithBLOBsStatementName(updateByExampleWithBLOBsStatementName);
+        }
+
+        if (stringHasValue(blobColumnListName)) {
+            tc.setBlobColumnListName(blobColumnListName);
+        }
+
+        if (stringHasValue(resultMapWithBLOBsName)) {
+            tc.setResultMapWithBLOBsName(resultMapWithBLOBsName);
+        }
+
+        if (stringHasValue(baseColumnListName)) {
+            tc.setBaseColumnListName(baseColumnListName);
+        }
+
+        /*add by ychuang end*/
         if (stringHasValue(selectByPrimaryKeyQueryId)) {
             tc.setSelectByPrimaryKeyQueryId(selectByPrimaryKeyQueryId);
         }
@@ -353,7 +483,7 @@ public class MyBatisGeneratorConfigurationParser {
         if (stringHasValue(delimitAllColumns)) {
             tc.setAllColumnDelimitingEnabled(isTrue(delimitAllColumns));
         }
-        
+
         if (stringHasValue(mapperName)) {
             tc.setMapperName(mapperName);
         }
@@ -361,7 +491,7 @@ public class MyBatisGeneratorConfigurationParser {
         if (stringHasValue(sqlProviderName)) {
             tc.setSqlProviderName(sqlProviderName);
         }
-        
+
         NodeList nodeList = node.getChildNodes();
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node childNode = nodeList.item(i);
@@ -418,7 +548,7 @@ public class MyBatisGeneratorConfigurationParser {
         if (stringHasValue(delimitedColumnName)) {
             co.setColumnNameDelimited(isTrue(delimitedColumnName));
         }
-        
+
         if (stringHasValue(isGeneratedAlways)) {
             co.setGeneratedAlways(Boolean.parseBoolean(isGeneratedAlways));
         }
@@ -489,7 +619,7 @@ public class MyBatisGeneratorConfigurationParser {
 
         tc.addIgnoredColumnPattern(icPattern);
     }
-    
+
     private void parseException(IgnoredColumnPattern icPattern, Node node) {
         Properties attributes = parseAttributes(node);
         String column = attributes.getProperty("column"); //$NON-NLS-1$
@@ -745,7 +875,7 @@ public class MyBatisGeneratorConfigurationParser {
             }
         }
     }
-    
+
     protected void parseConnectionFactory(Context context, Node node) {
         ConnectionFactoryConfiguration connectionFactoryConfiguration = new ConnectionFactoryConfiguration();
 
@@ -776,27 +906,27 @@ public class MyBatisGeneratorConfigurationParser {
      * This method resolve a property from one of the three sources: system properties,
      * properties loaded from the <properties> configuration element, and
      * "extra" properties that may be supplied by the Maven or Ant envireonments.
-     * 
+     *
      * If there is a name collision, system properties take precedence, followed by
      * configuration properties, followed by extra properties.
-     * 
+     *
      * @param key
      * @return the resolved property.  This method will return null if the property is
      *   undefined in any of the sources.
      */
     private String resolveProperty(String key) {
         String property = null;
-    	
+
         property = System.getProperty(key);
-    	
+
         if (property == null) {
             property = configurationProperties.getProperty(key);
         }
-    	
+
         if (property == null) {
             property = extraProperties.getProperty(key);
         }
-    	
+
         return property;
     }
 }
